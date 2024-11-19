@@ -1,4 +1,5 @@
 void call() {
+    node {
     def flywayCommand = """
                           ./flyway/flyway \
                           -url=jdbc:snowflake://${SNOWFLAKE_URL} \
@@ -10,4 +11,5 @@ void call() {
                            migrate
                            """
                         sh "${flywayCommand}"
+    }
 }
