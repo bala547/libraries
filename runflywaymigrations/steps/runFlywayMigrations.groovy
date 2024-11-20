@@ -7,7 +7,6 @@ void call() {
                           -password=${SNOWFLAKE_PASSWORD} \
                           -locations=filesystem:migrations \
                           -schemas=BALA \
-                          -table=FLYWAY_SCHEMA_HISTORY \
                            migrate
                            """
                         sh "${flywayCommand}"
