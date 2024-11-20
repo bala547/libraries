@@ -3,7 +3,7 @@ void call() {
     def flywayCommand = """
                           ./flyway/flyway \
                           -url=jdbc:snowflake://${SNOWFLAKE_URL}/?warehouse=${SNOWFLAKE_WAREHOUSE}&database=${SNOWFLAKE_DATABASE}&role=${SNOWFLAKE_ROLE} \
-                          -username=${SNOWFLAKE_USERNAME} \
+                          -user=${SNOWFLAKE_USERNAME} \
                           -password=${SNOWFLAKE_PASSWORD} \
                           -locations=filesystem:migrations \
                           -schemas=BALA \
