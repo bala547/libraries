@@ -6,6 +6,7 @@ void call() {
                           -user=${SNOWFLAKE_USERNAME} \
                           -password=${SNOWFLAKE_PASSWORD} \
                           -locations=filesystem:migrations \
+                          -database=EMP \
                           -schemas=BALA \
                            migrate
                            """
