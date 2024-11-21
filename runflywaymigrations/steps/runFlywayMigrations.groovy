@@ -14,6 +14,7 @@ void call() {
                     -password='${SNOWFLAKE_PASSWORD}' \\
                     -schemas='BALA' \\
                     -locations=filesystem:/flyway/sql \\
+                    -baselineOnMigrate=true \\
                     migrate
             """
     }
