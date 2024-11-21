@@ -4,8 +4,6 @@ void call() {
 
         echo "Running Flyway Migrations..."
 
-        // Explicitly pass Java options for the Docker container
-        withEnv(["JAVA_TOOL_OPTIONS=--add-opens=java.base/java.nio=ALL-UNNAMED"]) {
             sh """
                 docker run --rm \\
                     -v \$(pwd)/migrations:/flyway/sql \\
@@ -17,6 +15,5 @@ void call() {
                     -locations=filesystem:/flyway/sql \\
                     migrate
             """
-        }
     }
 }
