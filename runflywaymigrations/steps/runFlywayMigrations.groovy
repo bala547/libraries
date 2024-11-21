@@ -1,4 +1,4 @@
-void call {
+void call() {
  node {
     sh """
     docker run --rm \
