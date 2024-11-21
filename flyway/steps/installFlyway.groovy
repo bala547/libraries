@@ -1,4 +1,4 @@
-def call() {
+void call() {
     node {
         withEnv(["JAVA_TOOL_OPTIONS=--add-opens=java.base/java.nio=ALL-UNNAMED"]) {
             def flywayImage = 'flyway/flyway:10.17.3'
