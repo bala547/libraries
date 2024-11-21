@@ -12,6 +12,8 @@ void call() {
                     -url='jdbc:snowflake://${SNOWFLAKE_URL}' \\
                     -user='${SNOWFLAKE_USERNAME}' \\
                     -password='${SNOWFLAKE_PASSWORD}' \\
+                    -db='EMP' \\
+                    -schema='BALA' \\
                     -locations=filesystem:/flyway/sql \\
                     migrate
             """
